@@ -1,0 +1,14 @@
+{% extends "project/base.html" %}
+{% block content %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <small class="text-muted">Start Date: {{ task.start_date }} to End Date: {{ task.end_date }}</small>
+        </div>
+        <h2 class="article-title"> {{ task.name }}</h2>
+        <p class="article-content">Description-{{ task.description }}</p>
+        <a class='btn btn-secondary btn-sm mt-1' href="{%  url 'task-update' task.id%}">
+            Update</a>
+    </div>
+</article>
+{% endblock content %}
